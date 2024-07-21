@@ -54,7 +54,7 @@ def deposit():
         mysql.connection.commit()
         cursor.close()
         flash('Deposit successful!')
-        return redirect(url_for('index'))
+        return redirect(url_for('view_balance'))
     return render_template('deposit.html')
 
 @app.route('/withdraw', methods=['GET', 'POST'])
@@ -89,3 +89,7 @@ def delete_account():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+# นางสาวณัฐชยา บุนนาค
+# นางสาววารี แดนราชรัมย์
+# นางสาวเรวดี บุญรักษ์
