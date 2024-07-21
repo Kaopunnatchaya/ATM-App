@@ -7,14 +7,26 @@
 <body>
     <div class="container">
         <h1 class="mt-5">Welcome to the ATM</h1>
-        <br>
-        <br>
-        <a href="{{ url_for('index') }}" class="btn btn-outline-primary active" role="button" aria-pressed="true">Home</a>
-        <a href="{{ url_for('create_account') }}" class="btn btn-outline-primary " role="button" aria-pressed="true">Create Account</a>
-        <a href="{{ url_for('view_balance') }}" class="btn btn-outline-primary" role="button" aria-pressed="true">view Balance</a>
-        <a href="{{ url_for('deposit') }}" class="btn btn-outline-primary" role="button" aria-pressed="true">Deposit</a>
-        <a href="{{ url_for('withdraw') }}" class="btn btn-outline-primary" role="button" aria-pressed="true">Withdraw</a>
-        <a href="{{ url_for('delete_account') }} "class="btn btn-outline-primary" role="button" aria-pressed="true">Delete Account</a>        
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="{{ url_for('create_account') }}">Create account</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('view_balance') }}">View Balance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('deposit') }}">Deposit</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('withdraw') }}">Withdraw</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('delete_account') }}">Delete Account</a>
+          </li>
+        </ul>
       </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
